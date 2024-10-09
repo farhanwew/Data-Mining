@@ -1,0 +1,92 @@
+cara handling missing
+- drop all (done)
+- input median (done)
+- inpit mean (done)
+- Imputing missing values with mean/median of group (done)
+- Forward Fill  Backward Fill (gabisa)
+- Interpolation
+- K-Nearest Neighbors Imputations (KNNImputer)
+- Multiple Imputation (mice)
+
+
+Time siris nyampur location
+- coba model gabugan semua location (done)
+- coba buat model pisah pisah bedasarkan location (done)
+- buat model dengan based features (done)
+- buat model dengan fitur selection (..)
+
+
+
+
+Apparent temperature atau suhu semu adalah suhu setara yang dirasakan oleh manusia, 
+yang merupakan gabungan dari suhu udara, kelembaban relatif, dan kecepatan angin. 
+
+
+
+
+
+weather_variables_list = [
+    "temperature_2m (°C)", 
+    "surface_pressure (hPa)", 
+    "dewpoint_2m (°C)", 
+    "soil_temperature_0_to_7cm (°C)", 
+    "soil_temperature_7_to_28cm (°C)", 
+    "soil_temperature_100_to_255cm (°C)", 
+    "soil_temperature_28_to_100cm (°C)", 
+    "pressure_msl (hPa)",
+    'relativehumidity_2m (%)', 'pressure_msl (hPa)'
+]
+
+
+selected_features = [
+    'temperature_2m (°C)',
+    'surface_pressure (hPa)',
+    'dewpoint_2m (°C)',
+    'soil_temperature_0_to_7cm (°C)',
+    'soil_temperature_7_to_28cm (°C)',
+    'soil_temperature_100_to_255cm (°C)',
+    'soil_temperature_28_to_100cm (°C)',
+    'pressure_msl (hPa)',
+    'vapor_pressure_deficit (kPa)',
+    'relativehumidity_2m (%)'
+]
+
+additional_features = [
+    'direct_normal_irradiance (W/m²)',
+    'direct_radiation (W/m²)',
+    'shortwave_radiation (W/m²)',
+    'cloudcover (%)',
+    'cloudcover_low (%)',
+    'windspeed_100m (km/h)'
+]
+
+
+all_features = selected_features + additional_features
+
+
+
+# def XgbModel(df,col):
+#     scaler = MinMaxScaler()
+#     df[col] = scaler.fit_transform(df[col])
+#     df_x = df[col].drop(columns=[TARGET])
+#     df_y = df[col][TARGET]
+
+#     X_train, X_test, y_train, y_test = train_test_split(df_x, df_y, test_size=0.25, random_state=42)
+
+#     rfr = XGBRegressor()
+#     rfr.fit(X_train, y_train)
+#     y_pred_rf = rfr.predict(X_test[col])
+#     mse = root_mean_squared_error(y_test, y_pred_rf)
+#     rmse = mean_squared_error(y_test, y_pred_rf)
+#     print(f"root Mean Squared Error: {mse}")
+#     print(f" Mean Squared Error: {rmse}")
+
+
+# columns_for_scaling = [
+#    'temperature_2m (°C)','dewpoint_2m (°C)',
+#    'surface_pressure (hPa)',  'shortwave_radiation (W/m²)', 'direct_radiation (W/m²)', 'diffuse_radiation (W/m²)', 
+#    'windspeed_10m (km/h)', 'windspeed_100m (km/h)', 'soil_temperature_0_to_7cm (°C)', 'soil_temperature_7_to_28cm (°C)', 
+#    'soil_temperature_28_to_100cm (°C)', 'soil_temperature_100_to_255cm (°C)','apparent_temperature (°C)'
+# ]
+
+# trainModelXGB(train, columns_for_scaling)
