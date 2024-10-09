@@ -1,2 +1,2 @@
-# Data-Mining 2024 Artificial Intelligence Engineering
+# Data-Mining 2024 Artificial Intelligence Engineering ITS
 ---
