@@ -1,0 +1,21 @@
+total data predict = 2000
+
+dengan prediksi semua class 0 ==>  0.79642 accuracy (max) dengan 70% data
+
+70% dari 2000 = 1400
+
+1400 dari 79.5 % ==> 1113 (class 0) dan 287 (class 1)
+
+sisa data ==> 600
+
+[1] asumsi misal sisa nya 600 adalah kelas 1, maka hasil nya
+    kelas 1 = 887
+    kelas 0 = 1113
+
+[2] asumsi misal sisanya 600 adalah kelas 0, makas hasilnya 
+    kelas 1 = 287
+    keals 0 = 1713
+
+jadi domain jumlah dari kelas 1 berkisar antara lain 
+
+267 <= class 1 <= 887
